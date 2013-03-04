@@ -46,6 +46,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Implementation.Informes();
             }
+            if (type == typeof(global::LightSwitchApplication.Implementation.Cliente))
+            {
+                return new global::LightSwitchApplication.Implementation.Cliente();
+            }
     
             return base.CreateObject(type);
         }
@@ -65,6 +69,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(T) == typeof(global::LightSwitchApplication.Informes))
             {
                 return new global::LightSwitchApplication.Implementation.Informes();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.Cliente))
+            {
+                return new global::LightSwitchApplication.Implementation.Cliente();
             }
             return null;
         }
@@ -115,6 +123,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return typeof(global::LightSwitchApplication.Implementation.Informes);
             }
+            if (typeof(global::LightSwitchApplication.Cliente) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.Cliente);
+            }
             return null;
         }
     }
@@ -122,6 +134,39 @@ namespace LightSwitchApplication.Implementation
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public partial class Informes :
         global::LightSwitchApplication.Informes.DetailsClass.IImplementation
+    {
+    
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class Cliente :
+        global::LightSwitchApplication.Cliente.DetailsClass.IImplementation
     {
     
         #region IEntityImplementation Members

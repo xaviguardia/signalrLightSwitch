@@ -10,4 +10,12 @@
         created: [lightSwitchApplication.Informes]
     });
 
+    msls._addEntryPoints(lightSwitchApplication.Cliente, {
+        /// <field>
+        /// Called when a new cliente is created.
+        /// <br/>created(msls.application.Cliente entity)
+        /// </field>
+        created: [lightSwitchApplication.Cliente]
+    });
+
 }(msls.application));

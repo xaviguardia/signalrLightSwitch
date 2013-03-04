@@ -8,7 +8,18 @@
     <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
     <Property Name="Informe1" Type="Edm.String" Nullable="false" MaxLength="255" />
   </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Nombre" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Direccion" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Telefono" Type="Edm.String" Nullable="false" MaxLength="255" />
+  </EntityType>
   <EntityContainer Name="ApplicationData" m:IsDefaultEntityContainer="true">
     <EntitySet Name="InformesSet" EntityType="LightSwitchApplication.Informes" />
+    <EntitySet Name="Clientes" EntityType="LightSwitchApplication.Cliente" />
   </EntityContainer>
 </Schema>

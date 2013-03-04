@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 05/03/2013 0:21:17
+// Generation date: 05/03/2013 0:31:56
 namespace LightSwitchApplication.Implementation
 {
     
@@ -77,6 +77,23 @@ namespace LightSwitchApplication.Implementation
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private global::System.Data.Services.Client.DataServiceQuery<Informes> _InformesSet;
         /// <summary>
+        /// There are no comments for Clientes in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceQuery<Cliente> Clientes
+        {
+            get
+            {
+                if ((this._Clientes == null))
+                {
+                    this._Clientes = base.CreateQuery<Cliente>("Clientes");
+                }
+                return this._Clientes;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceQuery<Cliente> _Clientes;
+        /// <summary>
         /// There are no comments for InformesSet in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -84,13 +101,43 @@ namespace LightSwitchApplication.Implementation
         {
             base.AddObject("InformesSet", informes);
         }
+        /// <summary>
+        /// There are no comments for Clientes in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public void AddToClientes(Cliente cliente)
+        {
+            base.AddObject("Clientes", cliente);
+        }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private abstract class GeneratedEdmModel
         {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             private static global::Microsoft.Data.Edm.IEdmModel ParsedModel = LoadModelFromString();
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart0 = @"<edmx:Edmx Version=""1.0"" xmlns:edmx=""http://schemas.microsoft.com/ado/2007/06/edmx""><edmx:DataServices xmlns:m=""http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"" m:DataServiceVersion=""1.0"" m:MaxDataServiceVersion=""3.0""><Schema xmlns:annotation=""http://schemas.microsoft.com/ado/2009/02/edm/annotation"" Namespace=""LightSwitchApplication"" Alias=""Self"" xmlns=""http://schemas.microsoft.com/ado/2008/09/edm""><EntityType Name=""Informes""><Key><PropertyRef Name=""Id"" /></Key><Property Name=""Id"" Type=""Edm.Int32"" Nullable=""false"" annotation:StoreGeneratedPattern=""Identity"" /><Property Name=""RowVersion"" Type=""Edm.Binary"" Nullable=""false"" ConcurrencyMode=""Fixed"" annotation:StoreGeneratedPattern=""Computed"" /><Property Name=""Informe1"" Type=""Edm.String"" Nullable=""false"" MaxLength=""255"" /></EntityType><EntityContainer Name=""ApplicationData"" m:IsDefaultEntityContainer=""true""><EntitySet Name=""InformesSet"" EntityType=""LightSwitchApplication.Informes"" /><FunctionImport Name=""Microsoft_LightSwitch_GetCanInformation"" ReturnType=""Edm.String"" m:HttpMethod=""GET""><Parameter Name=""dataServiceMembers"" Type=""Edm.String"" Mode=""In"" /></FunctionImport></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>";
+            private const string ModelPart0 = "<edmx:Edmx Version=\"1.0\" xmlns:edmx=\"http://schemas.microsoft.com/ado/2007/06/edm" +
+                "x\"><edmx:DataServices xmlns:m=\"http://schemas.microsoft.com/ado/2007/08/dataserv" +
+                "ices/metadata\" m:DataServiceVersion=\"1.0\" m:MaxDataServiceVersion=\"3.0\"><Schema " +
+                "xmlns:annotation=\"http://schemas.microsoft.com/ado/2009/02/edm/annotation\" Names" +
+                "pace=\"LightSwitchApplication\" Alias=\"Self\" xmlns=\"http://schemas.microsoft.com/a" +
+                "do/2008/09/edm\"><EntityType Name=\"Informes\"><Key><PropertyRef Name=\"Id\" /></Key>" +
+                "<Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" annotation:StoreGeneratedP" +
+                "attern=\"Identity\" /><Property Name=\"RowVersion\" Type=\"Edm.Binary\" Nullable=\"fals" +
+                "e\" ConcurrencyMode=\"Fixed\" annotation:StoreGeneratedPattern=\"Computed\" /><Proper" +
+                "ty Name=\"Informe1\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"255\" /></Entity" +
+                "Type><EntityType Name=\"Cliente\"><Key><PropertyRef Name=\"Id\" /></Key><Property Na" +
+                "me=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" annotation:StoreGeneratedPattern=\"Iden" +
+                "tity\" /><Property Name=\"RowVersion\" Type=\"Edm.Binary\" Nullable=\"false\" Concurren" +
+                "cyMode=\"Fixed\" annotation:StoreGeneratedPattern=\"Computed\" /><Property Name=\"Nom" +
+                "bre\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"255\" /><Property Name=\"Direcc" +
+                "ion\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"255\" /><Property Name=\"Telefo" +
+                "no\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"255\" /></EntityType><EntityCon" +
+                "tainer Name=\"ApplicationData\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=" +
+                "\"InformesSet\" EntityType=\"LightSwitchApplication.Informes\" /><EntitySet Name=\"Cl" +
+                "ientes\" EntityType=\"LightSwitchApplication.Cliente\" /><FunctionImport Name=\"Micr" +
+                "osoft_LightSwitch_GetCanInformation\" ReturnType=\"Edm.String\" m:HttpMethod=\"GET\">" +
+                "<Parameter Name=\"dataServiceMembers\" Type=\"Edm.String\" Mode=\"In\" /></FunctionImp" +
+                "ort></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             private static string GetConcatenatedEdmxString()
             {
@@ -232,6 +279,183 @@ namespace LightSwitchApplication.Implementation
         private string _Informe1;
         partial void OnInforme1Changing(string value);
         partial void OnInforme1Changed();
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        protected virtual void OnPropertyChanged(string property)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
+            }
+        }
+    }
+    /// <summary>
+    /// There are no comments for LightSwitchApplication.Cliente in the schema.
+    /// </summary>
+    /// <KeyProperties>
+    /// Id
+    /// </KeyProperties>
+    [global::System.Data.Services.Common.EntitySetAttribute("Clientes")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("Id")]
+    public partial class Cliente : global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityBase, global::System.ComponentModel.INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Create a new Cliente object.
+        /// </summary>
+        /// <param name="ID">Initial value of Id.</param>
+        /// <param name="rowVersion">Initial value of RowVersion.</param>
+        /// <param name="nombre">Initial value of Nombre.</param>
+        /// <param name="direccion">Initial value of Direccion.</param>
+        /// <param name="telefono">Initial value of Telefono.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public static Cliente CreateCliente(int ID, byte[] rowVersion, string nombre, string direccion, string telefono)
+        {
+            Cliente cliente = new Cliente();
+            cliente.Id = ID;
+            cliente.RowVersion = rowVersion;
+            cliente.Nombre = nombre;
+            cliente.Direccion = direccion;
+            cliente.Telefono = telefono;
+            return cliente;
+        }
+        /// <summary>
+        /// There are no comments for Property Id in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int Id
+        {
+            get
+            {
+                return this._Id;
+            }
+            set
+            {
+                this.OnIdChanging(value);
+                if (object.Equals(this.Id, value))
+                {
+                    return;
+                }
+                this._Id = value;
+                this.OnIdChanged();
+                this.OnPropertyChanged("Id");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _Id;
+        partial void OnIdChanging(int value);
+        partial void OnIdChanged();
+        /// <summary>
+        /// There are no comments for Property RowVersion in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public byte[] RowVersion
+        {
+            get
+            {
+                if ((this._RowVersion != null))
+                {
+                    return ((byte[])(this._RowVersion.Clone()));
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            set
+            {
+                this.OnRowVersionChanging(value);
+                if (object.Equals(this.RowVersion, value))
+                {
+                    return;
+                }
+                this._RowVersion = value;
+                this.OnRowVersionChanged();
+                this.OnPropertyChanged("RowVersion");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private byte[] _RowVersion;
+        partial void OnRowVersionChanging(byte[] value);
+        partial void OnRowVersionChanged();
+        /// <summary>
+        /// There are no comments for Property Nombre in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Nombre
+        {
+            get
+            {
+                return this._Nombre;
+            }
+            set
+            {
+                this.OnNombreChanging(value);
+                if (object.Equals(this.Nombre, value))
+                {
+                    return;
+                }
+                this._Nombre = value;
+                this.OnNombreChanged();
+                this.OnPropertyChanged("Nombre");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Nombre;
+        partial void OnNombreChanging(string value);
+        partial void OnNombreChanged();
+        /// <summary>
+        /// There are no comments for Property Direccion in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Direccion
+        {
+            get
+            {
+                return this._Direccion;
+            }
+            set
+            {
+                this.OnDireccionChanging(value);
+                if (object.Equals(this.Direccion, value))
+                {
+                    return;
+                }
+                this._Direccion = value;
+                this.OnDireccionChanged();
+                this.OnPropertyChanged("Direccion");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Direccion;
+        partial void OnDireccionChanging(string value);
+        partial void OnDireccionChanged();
+        /// <summary>
+        /// There are no comments for Property Telefono in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Telefono
+        {
+            get
+            {
+                return this._Telefono;
+            }
+            set
+            {
+                this.OnTelefonoChanging(value);
+                if (object.Equals(this.Telefono, value))
+                {
+                    return;
+                }
+                this._Telefono = value;
+                this.OnTelefonoChanged();
+                this.OnPropertyChanged("Telefono");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Telefono;
+        partial void OnTelefonoChanging(string value);
+        partial void OnTelefonoChanged();
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]

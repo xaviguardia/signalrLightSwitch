@@ -35,6 +35,41 @@ namespace LightSwitchApplication.Implementation
     }
     #endregion
     
+    #region Cliente
+    [global::System.Runtime.Serialization.DataContract(Namespace = "http://schemas.datacontract.org/2004/07/ApplicationData.Implementation")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class Cliente :
+        global::LightSwitchApplication.Cliente.DetailsClass.IImplementation
+    {
+        partial void OnIdChanged()
+        {
+            this.___OnPropertyChanged("Id");
+        }
+        
+        partial void OnRowVersionChanged()
+        {
+            this.___OnPropertyChanged("RowVersion");
+        }
+        
+        partial void OnNombreChanged()
+        {
+            this.___OnPropertyChanged("Nombre");
+        }
+        
+        partial void OnDireccionChanged()
+        {
+            this.___OnPropertyChanged("Direccion");
+        }
+        
+        partial void OnTelefonoChanged()
+        {
+            this.___OnPropertyChanged("Telefono");
+        }
+        
+    }
+    #endregion
+    
     #region ApplicationData
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -45,6 +80,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(T) == typeof(global::LightSwitchApplication.Informes))
             {
                 return new global::LightSwitchApplication.Implementation.Informes();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.Cliente))
+            {
+                return new global::LightSwitchApplication.Implementation.Cliente();
             }
             return null;
         }
@@ -98,6 +137,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.Informes) == definitionType)
             {
                 return typeof(global::LightSwitchApplication.Implementation.Informes);
+            }
+            if (typeof(global::LightSwitchApplication.Cliente) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.Cliente);
             }
             return null;
         }

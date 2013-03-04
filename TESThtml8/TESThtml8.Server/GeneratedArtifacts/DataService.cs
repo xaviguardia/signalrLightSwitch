@@ -96,6 +96,42 @@ namespace LightSwitchApplication
         partial void InformesSet_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Informes, bool>> filter);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Clientes_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Clientes_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Clientes_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Clientes_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Clientes_Inserting(global::LightSwitchApplication.Cliente entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Clientes_Inserted(global::LightSwitchApplication.Cliente entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Clientes_Updating(global::LightSwitchApplication.Cliente entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Clientes_Updated(global::LightSwitchApplication.Cliente entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Clientes_Deleting(global::LightSwitchApplication.Cliente entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Clientes_Deleted(global::LightSwitchApplication.Cliente entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Clientes_Validate(global::LightSwitchApplication.Cliente entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Clientes_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Cliente, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void SaveChanges_CanExecute(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -202,6 +238,81 @@ namespace LightSwitchApplication
             {
                 global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Informes, bool>> filter = null;
                 d.InformesSet_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.Cliente>
+                __ClientesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.Cliente>(
+                    "Clientes",
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Clientes_CanInsert,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Clientes_CanUpdate,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Clientes_CanDelete,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Clientes_CanRead,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Clientes_Inserting,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Clientes_Inserted,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Clientes_Updating,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Clientes_Updated,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Clientes_Deleting,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Clientes_Deleted,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Clientes_Validate,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Clientes_Filter);
+            private static bool __Clientes_CanInsert(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Clientes_CanInsert(ref result);
+                return result;
+            }
+            private static bool __Clientes_CanUpdate(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Clientes_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __Clientes_CanDelete(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Clientes_CanDelete(ref result);
+                return result;
+            }
+            private static bool __Clientes_CanRead(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Clientes_CanRead(ref result);
+                return result;
+            }
+            private static void __Clientes_Inserting(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Cliente e)
+            {
+                d.Clientes_Inserting(e);
+            }
+            private static void __Clientes_Inserted(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Cliente e)
+            {
+                d.Clientes_Inserted(e);
+            }
+            private static void __Clientes_Updating(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Cliente e)
+            {
+                d.Clientes_Updating(e);
+            }
+            private static void __Clientes_Updated(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Cliente e)
+            {
+                d.Clientes_Updated(e);
+            }
+            private static void __Clientes_Deleting(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Cliente e)
+            {
+                d.Clientes_Deleting(e);
+            }
+            private static void __Clientes_Deleted(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Cliente e)
+            {
+                d.Clientes_Deleted(e);
+            }
+            private static void __Clientes_Validate(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Cliente e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.Clientes_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Cliente, bool>> __Clientes_Filter(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Cliente, bool>> filter = null;
+                d.Clientes_Filter(ref filter);
                 return filter;
             }
             

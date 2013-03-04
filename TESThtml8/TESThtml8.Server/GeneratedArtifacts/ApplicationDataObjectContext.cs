@@ -77,6 +77,22 @@ namespace LightSwitchApplication.Implementation
             }
         }
         private ObjectSet<Informes> _InformesSet;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Cliente> Clientes
+        {
+            get
+            {
+                if ((_Clientes == null))
+                {
+                    _Clientes = base.CreateObjectSet<Cliente>("Clientes");
+                }
+                return _Clientes;
+            }
+        }
+        private ObjectSet<Cliente> _Clientes;
 
         #endregion
 
@@ -89,6 +105,14 @@ namespace LightSwitchApplication.Implementation
         {
             base.AddObject("InformesSet", informes);
         }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Clientes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToClientes(Cliente cliente)
+        {
+            base.AddObject("Clientes", cliente);
+        }
 
         #endregion
 
@@ -97,6 +121,167 @@ namespace LightSwitchApplication.Implementation
     #endregion
 
     #region Entities
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="Cliente")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Cliente : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Cliente object.
+        /// </summary>
+        /// <param name="id">Initial value of the Id property.</param>
+        /// <param name="rowVersion">Initial value of the RowVersion property.</param>
+        /// <param name="nombre">Initial value of the Nombre property.</param>
+        /// <param name="direccion">Initial value of the Direccion property.</param>
+        /// <param name="telefono">Initial value of the Telefono property.</param>
+        public static Cliente CreateCliente(global::System.Int32 id, global::System.Byte[] rowVersion, global::System.String nombre, global::System.String direccion, global::System.String telefono)
+        {
+            Cliente cliente = new Cliente();
+            cliente.Id = id;
+            cliente.RowVersion = rowVersion;
+            cliente.Nombre = nombre;
+            cliente.Direccion = direccion;
+            cliente.Telefono = telefono;
+            return cliente;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Id
+        {
+            get
+            {
+                return _Id;
+            }
+            set
+            {
+                if (_Id != value)
+                {
+                    OnIdChanging(value);
+                    ReportPropertyChanging("Id");
+                    _Id = value;
+                    ReportPropertyChanged("Id");
+                    OnIdChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Id;
+        partial void OnIdChanging(global::System.Int32 value);
+        partial void OnIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] RowVersion
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_RowVersion);
+            }
+            set
+            {
+                OnRowVersionChanging(value);
+                ReportPropertyChanging("RowVersion");
+                _RowVersion = value;
+                ReportPropertyChanged("RowVersion");
+                OnRowVersionChanged();
+            }
+        }
+        private global::System.Byte[] _RowVersion;
+        partial void OnRowVersionChanging(global::System.Byte[] value);
+        partial void OnRowVersionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Nombre
+        {
+            get
+            {
+                return _Nombre;
+            }
+            set
+            {
+                OnNombreChanging(value);
+                ReportPropertyChanging("Nombre");
+                _Nombre = value;
+                ReportPropertyChanged("Nombre");
+                OnNombreChanged();
+            }
+        }
+        private global::System.String _Nombre;
+        partial void OnNombreChanging(global::System.String value);
+        partial void OnNombreChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Direccion
+        {
+            get
+            {
+                return _Direccion;
+            }
+            set
+            {
+                OnDireccionChanging(value);
+                ReportPropertyChanging("Direccion");
+                _Direccion = value;
+                ReportPropertyChanged("Direccion");
+                OnDireccionChanged();
+            }
+        }
+        private global::System.String _Direccion;
+        partial void OnDireccionChanging(global::System.String value);
+        partial void OnDireccionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Telefono
+        {
+            get
+            {
+                return _Telefono;
+            }
+            set
+            {
+                OnTelefonoChanging(value);
+                ReportPropertyChanging("Telefono");
+                _Telefono = value;
+                ReportPropertyChanged("Telefono");
+                OnTelefonoChanged();
+            }
+        }
+        private global::System.String _Telefono;
+        partial void OnTelefonoChanging(global::System.String value);
+        partial void OnTelefonoChanged();
+
+        #endregion
+
+    
+    }
     
     /// <summary>
     /// No Metadata Documentation available.

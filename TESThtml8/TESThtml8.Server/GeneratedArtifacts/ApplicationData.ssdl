@@ -2,6 +2,7 @@
 <Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ApplicationDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
   <EntityContainer Name="ApplicationDataStore">
     <EntitySet Name="InformesSet" EntityType="ApplicationDataStore.Informes" store:Type="Tables" Schema="dbo" Table="InformesSet" />
+    <EntitySet Name="Clientes" EntityType="ApplicationDataStore.Cliente" store:Type="Tables" Schema="dbo" Table="Clientes" />
   </EntityContainer>
   <EntityType Name="Informes">
     <Key>
@@ -10,5 +11,15 @@
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
     <Property Name="Informe1" Type="nvarchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Direccion" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Telefono" Type="nvarchar" Nullable="false" MaxLength="255" />
   </EntityType>
 </Schema>

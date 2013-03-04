@@ -652,4 +652,10 @@
       </ScreenProperty>
     </Screen.Properties>
   </Screen>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Cliente" />
+    </EntityType.Attributes>
+  </EntityType>
 </ModelFragment>
